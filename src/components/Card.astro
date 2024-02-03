@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string
+  body: string
+  href: string
+  icon?: ImageMetadata
+  alt?: string
+}
+
+const { href, title, body, icon, alt } = Astro.props
+---
+
+<li role='listitem'>
+  <a
+    class='flex p-6 border-2 bg-white rounded-2xl hover:border-[#FC9800] group'
+    href={href}
+    target='_blank'
+    rel='noopener noreferrer'
+  >
+    {icon && <img class='w-12 h-12 mr-6 group-hover:scale-110 transition-transform' src={icon.src} role='img' alt={alt} />}
+    <div class='flex flex-col'>
+      <h2 class='font-bold'>
+        {title}
+        <span>&rarr;</span>
+      </h2>
+      <p>
+        {body}
+      </p>
+    </div>
+  </a>
+</li>

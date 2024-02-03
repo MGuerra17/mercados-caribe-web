@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import foodIcon from '../../public/foodIcon.svg'
+import phoneIcon from '../../public/phoneIcon.svg'
+import igIcon from '../../public/igIcon.svg'
+---
+
+<Layout title='Mercados Caribe - Combos de mercados'>
+  <main class='w-full h-screen grid grid-cols-1 md:grid-cols-2 grid-rows-1'>
+    <div class='p-5 md:p-10 relative'>
+      <h1 class='text-4xl md:text-6xl lg:text-7xl font-bold text-[#FC9800]'>Mercados caribe 🍎</h1>
+      <h2 class='text-lg md:text-3xl mt-3 text-black font-semibold'>Combos de mercados a domicilio</h2>
+      <ul role='list' class='link-card-grid flex flex-col gap-y-4 mt-8 md:mt-16'>
+        <Card
+          icon={foodIcon}
+          alt='Icono de comida'
+          href='https://mercados-caribe.vercel.app/combos'
+          title='Combos'
+          body='Echa un vistazo a nuestros combos de mercados'
+        />
+        <Card
+          icon={phoneIcon}
+          alt='Icono de teléfono'
+          href=' https://wa.me/573024276663'
+          title='Contacto'
+          body='Escríbenos hoy mismo para hacer tu pedido'
+        />
+        <Card
+          icon={igIcon}
+          alt='Icono de Instagram'
+          href='https://www.instagram.com/mercadoscaribe/'
+          title='Instagram'
+          body='Síguenos en Instagram para ver más de nuestros productos'
+        />
+      </ul>
+      <p style={{ fontFamily: 'Chewy' }} class='text-[#3E721D] text-center mt-10 text-xl'>
+        La frescura de siempre, a un click de distancia
+      </p>
+      <div
+        class='absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]'
+      >
+      </div>
+    </div>
+    <img src='/main-image.webp' alt='Vendedora de combos de mercados' class='w-full h-full object-cover hidden md:block' />
+  </main>
+</Layout>
